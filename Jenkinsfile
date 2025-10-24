@@ -17,11 +17,11 @@ pipeline {
         stage('Deploy Frontend to Tomcat') {
             steps {
                 bat '''
-                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\2300030279-frontend" (
-                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\2300030279-frontend"
+                if exist "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\2300030279-frontend" (
+                    rmdir /S /Q "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\2300030279-frontend"
                 )
-                mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\2300030279-frontend"
-                xcopy /E /I /Y STUDENTAPI-REACT\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\2300030279-frontend"
+                mkdir "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\2300030279-frontend"
+                xcopy /E /I /Y STUDENTAPI-REACT\\dist\\* "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\2300030279-frontend"
                 '''
             }
         }
